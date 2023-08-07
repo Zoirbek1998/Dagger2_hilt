@@ -1,11 +1,12 @@
 package com.example.dagger2.di.companent
 
 import com.example.dagger2.MainActivity
+import com.example.dagger2.di.modul.DatabaseModule
 import com.example.dagger2.di.modul.NetworkModule
 import dagger.Component
 import javax.inject.Singleton
 
-@Component(modules = [NetworkModule::class])
+@Component(modules = [NetworkModule::class,DatabaseModule::class])
 @Singleton
 interface ApplicationCompanent {
 
